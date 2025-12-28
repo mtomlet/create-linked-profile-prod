@@ -1,0 +1,13 @@
+{
+  "name": "create-linked-profile-prod",
+  "version": "1.0.0",
+  "description": "PRODUCTION Create Linked Profile for Keep It Cut - Phoenix Encanto",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.6.2"
+  }
+}
