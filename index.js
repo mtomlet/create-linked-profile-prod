@@ -6,6 +6,8 @@
  *
  * PRODUCTION CREDENTIALS - DO NOT USE FOR TESTING
  * Location: Keep It Cut - Phoenix Encanto (201664)
+ *
+ * Version: 1.0.1 - Deployed 2025-12-28
  */
 
 const express = require('express');
