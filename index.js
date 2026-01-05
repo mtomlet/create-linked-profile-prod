@@ -149,7 +149,8 @@ app.post('/create', async (req, res) => {
       IsMinor: is_minor === true || is_minor === 'true',
       GuardianId: guardianId,
       GenderEnum: 92,        // Male (default for barbershop)
-      ReferredByEnum: 1248   // Client referral
+      ReferredByEnum: 1249,  // Employee
+      ReferredById: "159793cd-bf26-4574-afcd-ac08017f2cf8"  // Joshua Thorsvik (Owner)
     };
 
     if (email) {
