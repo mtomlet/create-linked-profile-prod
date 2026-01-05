@@ -147,7 +147,9 @@ app.post('/create', async (req, res) => {
       ObjectState: 2026,
       OnlineBookingAccess: true,
       IsMinor: is_minor === true || is_minor === 'true',
-      GuardianId: guardianId
+      GuardianId: guardianId,
+      GenderEnum: 92,        // Male (default for barbershop)
+      ReferredByEnum: 1248   // Client referral
     };
 
     if (email) {
