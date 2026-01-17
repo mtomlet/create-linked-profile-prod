@@ -155,6 +155,7 @@ app.post('/create', async (req, res) => {
 
     if (email) {
       profileData.EmailAddress = email;
+      profileData.EmailCommOptedInStateEnum = 2086;  // OptedIn
     }
 
     if (phone) {
@@ -164,7 +165,7 @@ app.post('/create', async (req, res) => {
         CountryCode: "1",
         Number: cleanPhone,
         IsPrimary: true,
-        SmsCommOptedInState: 2087
+        SmsCommOptedInState: 2086  // OptedIn (not 2087 which is OptedOut)
       }];
     }
 
