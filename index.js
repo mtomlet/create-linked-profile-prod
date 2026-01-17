@@ -156,16 +156,17 @@ app.post('/create', async (req, res) => {
     if (email) {
       profileData.EmailAddress = email;
       profileData.EmailCommOptedInStateEnum = 2086;  // OptedIn
+      profileData.IsMarketingEmailEnabled = true;    // Marketing emails enabled
     }
 
     if (phone) {
       const cleanPhone = phone.replace(/\D/g, '');
-      profileData.PhoneNumbers = [{
-        Type: 21,
-        CountryCode: "1",
-        Number: cleanPhone,
-        IsPrimary: true,
-        SmsCommOptedInState: 2086  // OptedIn (not 2087 which is OptedOut)
+      profileData.phoneNumbers = [{  // camelCase required for Meevo API
+        type: 21,  // Mobile phone type
+        countryCode: "1",
+        number: cleanPhone,
+        isPrimary: true,
+        smsCommOptedInState: 11045715  // SMS Marketing OptIn (matches create-profile-prod)
       }];
     }
 
