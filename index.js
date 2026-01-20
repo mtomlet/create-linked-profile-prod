@@ -166,8 +166,8 @@ app.post('/create', async (req, res) => {
         countryCode: "1",
         number: cleanPhone,
         isPrimary: true,
-        smsCommOptedInState: 11045715  // SMS Marketing OptIn - enables "Use for Text Marketing"
-        // Values: 2086=Communication OptIn, 11045715=Marketing OptIn
+        smsCommOptedInState: 2086  // SMS OptedIn - enables "Opt-in for text notifications"
+        // 2086 = OptedIn, 11045715 = DEACTIVATED
       }];
     }
 
