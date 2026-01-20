@@ -7,7 +7,7 @@
  * PRODUCTION CREDENTIALS - DO NOT USE FOR TESTING
  * Location: Keep It Cut - Phoenix Encanto (201664)
  *
- * Version: 1.0.1 - Deployed 2025-12-28
+ * Version: 1.0.2 - Fixed referral source to AI Phone Receptionist (2026-01-20)
  */
 
 const express = require('express');
@@ -149,8 +149,8 @@ app.post('/create', async (req, res) => {
       IsMinor: is_minor === true || is_minor === 'true',
       GuardianId: guardianId,
       GenderEnum: 92,        // Male (default for barbershop)
-      ReferredByEnum: 1249,  // Employee
-      ReferredById: "159793cd-bf26-4574-afcd-ac08017f2cf8"  // Joshua Thorsvik (Owner)
+      ReferredByEnum: 1250,  // Referral
+      ReferredById: "98d508fe-65e9-4736-83cf-b3cc0164634a"  // AI Phone Receptionist
     };
 
     if (email) {
