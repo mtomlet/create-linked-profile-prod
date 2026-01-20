@@ -166,8 +166,8 @@ app.post('/create', async (req, res) => {
         countryCode: "1",
         number: cleanPhone,
         isPrimary: true,
-        smsCommOptedInState: 2086  // SMS Communication OptIn - enables "Opt in for text notifications"
-        // Note: 11045715 was causing "DEACTIVATED" status for text notifications
+        smsCommOptedInState: 11045715  // SMS Marketing OptIn - enables "Use for Text Marketing"
+        // Values: 2086=Communication OptIn, 11045715=Marketing OptIn
       }];
     }
 
